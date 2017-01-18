@@ -1,0 +1,15 @@
+1. This project is to study the performance of each target enriched by 120mer and 80mer
+plot: depth vs 0-1target for each target; targets are grouped based the #of_120mer/target
+
+2. the manifest has been split at the beginning to get Targets_with_one(two)(three)_120mer.txt,
+which the starting pos has been -1 from the original manifest
+
+3. "bedtools coverage -a probe.bed -b Targets_with_one(two)(three)_120mer.txt" -d gives 
+each position in target with the probe coverage
+
+4. normalized_pos.py assigned the normalized position (0-1) for each target.
+
+5. There is another normalized_from_manifest.py written for Justice, which does not need bedtools
+but uses the original manifest as input. For this one, later analysis script should be modified 
+since there is no "Probe_coverage" column, etc.
+
