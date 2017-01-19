@@ -1,0 +1,12 @@
+1. bedtools intersect -a IDT.bed -b target_with_two_120 -wa > two_probe_of_each_target_120
+this is to get the probe which cover targets_with_two_120mer
+
+2. bedtools coverage -a Target_with_two_120.txt -b two_probe_of_each_target_120.txt -d > 
+two_probe_of_each_target_120_each_base.txt
+this is to get each pos of the probe
+
+3. model_multiple_probe.py 
+	a. normalize (need to consider linking the probes for one target together) 
+	b. match_line
+	c. GC 
+	
