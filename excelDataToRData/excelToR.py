@@ -61,7 +61,8 @@ def main():
             WriteDataList = []
             for ruple in RDataList:
                 WriteDataList.append(ruple.basepair + "," + ruple.val + "," + ruple.field)
-            output.write('\n'.join(WriteDataList))
+            output.write('\n'.join(WriteDataList)) # join operation only weave together all the string in WriteDataList by '\n', lacking a '\n' in the end.
+            output.write('\n')
     output.close()
 
 
